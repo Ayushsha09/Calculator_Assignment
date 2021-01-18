@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Calculator</title>
+  <link rel="stylesheet" href="calcstyle.css">
+
+  <script type="text/javascript">
+      let history = document.getElementById("history");
+
+    Current = "0";
+
+    function calcNumber(result){
+      form.displayResult.value=form.displayResult.value+result; 
+    }
+  function PlusMinus(){
+  var b=document.getElementById("displayResult");
+   var n=b.value; 
+   n = n * -1;
+   b.value = n;
+ }
+  </script>
+</head>
+ 
+<body>
+
+  <div class="container">
+    <form name="form">
+    <div class="display">
+      <input type="text" placeholder="0" name="displayResult" id="displayResult" />
+      <input type="text" placeholder="0" name="history" id="history" /> 
+    </div>
+      <div class="buttons">
+        <div class="row">
+          <input type="button" class="lgrey" name="clear" value="C" onclick="form.displayResult.value = ''; form.history.value = ''">
+          <input type="button" class="lgrey" name="opp" value="+/-" id="opp" onclick="PlusMinus()"/>
+          <input type="button" class="lgrey" name="modulo" value="%" onClick="calcNumber(modulo.value)">
+          <input type="button" name="divb" id="gray" value="/" onClick="calcNumber(divb.value)">
+        </div>
+        <div class="row">
+          <input type="button" name="b7" value="7" onClick="calcNumber(b7.value)">
+          <input type="button" name="b8" value="8" onClick="calcNumber(b8.value)">
+          <input type="button" name="b9" value="9" onClick="calcNumber(b9.value)">
+          <input type="button" name="mulb" id="gray" value="*" placeholder="X" onClick="calcNumber(mulb.value)">
+        </div>
+        
+        <div class="row">
+          <input type="button" name="b4" value="4" onClick="calcNumber(b4.value)">
+          <input type="button" name="b5" value="5" onClick="calcNumber(b5.value)">
+          <input type="button" name="b6" value="6" onClick="calcNumber(b6.value)">
+          <input type="button" name="subb" id="gray" value="-" onClick="calcNumber(subb.value)">
+        </div>
+        
+        <div class="row">
+          <input type="button" name="b1" value="1" onClick="calcNumber(b1.value)">
+          <input type="button" name="b2" value="2" onClick="calcNumber(b2.value)">
+          <input type="button" name="b3" value="3" onClick="calcNumber(b3.value)">
+          <input type="button" id="gray" name="addb" value="+" onClick="calcNumber(addb.value)">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b0" value="0" onClick="calcNumber(b0.value)">
+        <input type="button" name="null" value=" " onClick="">
+        <input type="button" name="potb" value="." onClick="calcNumber(potb.value)">
+        <input type="button" class="yellow" value="=" onClick="history.value=eval(displayResult.value)">
+        </div>
+      </div>
+    
+    </form>
+  </div>
+</body>
+  
+</html>
